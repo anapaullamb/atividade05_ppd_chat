@@ -23,6 +23,7 @@ io.on('connection', (socket) =>{
         if(chat === 1){
             connectedUsers1.push(username);
             console.log(connectedUsers1);
+            socket.join(socket.chat);
             socket.emit('user-ok', connectedUsers1);
             socket.broadcast.to(socket.chat).emit('list-update',{
                 joined: username,
@@ -31,6 +32,7 @@ io.on('connection', (socket) =>{
         }else{
             connectedUsers2.push(username);
             console.log(connectedUsers2);
+            socket.join(socket.chat);
             socket.emit('user-ok', connectedUsers2);
             socket.broadcast.to(socket.chat).emit('list-update',{
                 joined: username,

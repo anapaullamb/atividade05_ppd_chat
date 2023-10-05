@@ -37,7 +37,7 @@ function renderUserList(){
 }
 function addMessage(type,user,msg){
     
-    alert("entrou no addMessage-msg");
+   // alert("entrou no addMessage-msg");
     let ul = document.querySelector('.chatList');
 
     switch(type){
